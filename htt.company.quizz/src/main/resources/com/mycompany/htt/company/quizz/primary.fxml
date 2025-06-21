@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="346.0" prefWidth="413.0" spacing="20.0" styleClass="main" stylesheets="@Styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.htt.company.quizz.PrimaryController">
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label" text="QUIZZ APP" />
+      <Button onAction="#Questionadd" styleClass="btn" text="Thêm câu hỏi" />
+      <Button fx:id="primaryButton1" onAction="#Pratice" styleClass="btn" text="Luyện tập" />
+      <Button fx:id="primaryButton2" onAction="#Thi" styleClass="btn" text="Thi" />
+      <Button fx:id="primaryButton3" onAction="#DangNhap" styleClass="btn" text="Đăng nhập" />
+      <Button fx:id="primaryButton31" onAction="#Dangky" styleClass="btn" text="Đăng ký" />
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

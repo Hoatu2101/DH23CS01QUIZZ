@@ -1,0 +1,10 @@
+com\mycompany\htt\company\quizz\App.class
+com\mycompany\htt\company\quizz\PrimaryController.class
+htt\company\utils\singletonConn.class
+Pojo\Catagory.class
+com\mycompany\htt\company\quizz\SecondaryController.class
+com\mycompany\htt\company\quizz\stage.class
+com\mycompany\htt\company\quizz\Question.class
+module-info.class
+Service\CatagoryService.class
+htt\company\utils\singletonAlert.class
