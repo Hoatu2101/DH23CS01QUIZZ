@@ -5,6 +5,7 @@
 package com.dht.services;
 
 import com.dht.pojo.Category;
+import com.dht.pojo.Choice;
 import com.dht.pojo.Question;
 import com.dht.utils.JdbcConnector;
 import java.sql.Connection;
@@ -93,4 +94,34 @@ public class QuestionServices {
         return stm.executeUpdate() > 0;
 
     }
+     public List<Question> getQuestion(int num) throws SQLException {
+        Connection conn = JdbcConnector.getInstance().connect();
+        PreparedStatement stm = conn.prepareCall("SELECT * FROM question ORDER BY rand() LIMIT ?");
+        stm.setInt(1,num);
+        ResultSet rs = stm.executeQuery();
+        List<Question> questions = new ArrayList<>();
+        while (rs.next()) {
+             int id =rs.getInt("id");
+            String content=rs.getString("content");
+            Question q = new Question.Builder(id,content).addALLChoice(this.getChoicesByQuestionId(id)).build();
+            questions.add(q);
+        }
+        return questions;
+    }
+     public List<Choice>getChoicesByQuestionId(int questionID) throws SQLException{
+       Connection conn = JdbcConnector.getInstance().connect();
+        PreparedStatement stm = conn.prepareCall("SELECT * FROM choice WHERE question_id =?");
+        stm.setInt(1,questionID);
+        ResultSet rs = stm.executeQuery();
+        List<Choice> choice  = new ArrayList<>();
+        while (rs.next()) {
+            int id =rs.getInt("id");
+            String content=rs.getString("content");
+            boolean correct = rs.getBoolean("is_correct");
+          Choice c = new Choice(questionID, content, correct);
+            choice.add(c);
+        }
+        return choice;
+     
+     }
 }

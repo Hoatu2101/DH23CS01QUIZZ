@@ -77,7 +77,10 @@ public class Question {
             this.choices.add(c);
             return this;
         }
-        
+public Builder addALLChoice(List<Choice> choices) {
+    this.choices.addAll(choices); // ✅ Đúng: thêm choices được truyền vào
+    return this;
+}
         public Question build() {
             return new Question(this);
         }

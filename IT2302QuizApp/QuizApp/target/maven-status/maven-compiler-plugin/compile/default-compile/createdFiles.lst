@@ -23,3 +23,4 @@ com\dht\services\CategoryServices.class
 com\dht\utils\theme\Theme$1.class
 com\dht\quizapp\QuestionsController.class
 com\dht\utils\MyAlert.class
+com\dht\quizapp\PraticeController.class
