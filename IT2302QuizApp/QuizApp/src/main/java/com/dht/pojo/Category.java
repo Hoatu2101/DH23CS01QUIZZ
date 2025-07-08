@@ -17,6 +17,10 @@ public class Category {
         this.name = name;
     }
 
+    public Category(int id) {
+        this.id=id;
+    }
+    
     @Override
     public String toString() {
         return this.getName(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody

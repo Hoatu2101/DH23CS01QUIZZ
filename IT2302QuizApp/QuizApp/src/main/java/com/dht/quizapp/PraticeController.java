@@ -5,7 +5,7 @@
 package com.dht.quizapp;
 
 import com.dht.pojo.Question;
-import com.dht.services.QuestionServices;
+import com.dht.services.question.QuestionServices;
 import com.dht.utils.configs;
 import java.net.URL;
 import java.sql.SQLException;
@@ -52,15 +52,15 @@ public class PraticeController implements Initializable {
 
     }
 
-    public void HandleStart(ActionEvent event) {
-        try {
-            // TODO
-            this.Questions = configs.questionServices.getQuestion(Integer.parseInt(this.txtNum.getText()));
-            this.loadQuestion();
-        } catch (SQLException ex) {
-            Logger.getLogger(PraticeController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
+   public void HandleStart(ActionEvent event) {
+//        try {
+//            // TODO
+//            this.Questions = configs.questionServices.getQuestion(Integer.parseInt(this.txtNum.getText()));
+//            this.loadQuestion();
+//        } catch (SQLException ex) {
+//            Logger.getLogger(PraticeController.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+   }
 
     public void HandleNext(ActionEvent event) {
         if (this.currentQuestion < this.Questions.size() - 1) {

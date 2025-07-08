@@ -42,7 +42,21 @@
       </VBox>
       <Button mnemonicParsing="false" onAction="#addChoice" styleClass="Button" text="Thêm lựa chọn" />
       <Button mnemonicParsing="false" onAction="#addQuestion" style="-fx-background-color: red;" styleClass="Button" text="Thêm câu hỏi" />
-      <TextField fx:id="txtSearch" promptText="Tìm kiếm" />
+      <VBox>
+         <children>
+            <VBox>
+               <children>
+                  <HBox styleClass="Main">
+                     <children>
+                        <TextField fx:id="txtSearch" promptText="Tìm kiếm" style="-fx-padding: 10;" styleClass="Input" />
+                        <ComboBox fx:id="cbSoftCates" prefWidth="150.0" styleClass="Input" />
+                        <ComboBox fx:id="cbSoftLevrl" prefWidth="150.0" styleClass="Input" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
       <TableView fx:id="questioncb" prefHeight="164.0" prefWidth="540.0" />
    </children>
 </VBox>

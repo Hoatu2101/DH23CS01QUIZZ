@@ -12,7 +12,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     -fx-alignment: CENTER;
     -fx-spacing: 10;
 }
-
+.question{
+    -fx-padding: 20;
+    
+}
 .Subject {
     -fx-font-size: 40;
     -fx-font-weight: bold;
